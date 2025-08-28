@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/player/:videoId",
-      "destination": "/public/player.html"
+      "destination": "/html/player.html"
     },
     {
       "source": "/:videoId",
