@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/player/:videoId",
+      "destination": "/public/player.html"
+    },
+    {
       "source": "/:videoId",
       "destination": "/api/:videoId"
     }
