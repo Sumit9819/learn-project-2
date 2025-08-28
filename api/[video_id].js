@@ -5,15 +5,10 @@ const videoData = {
     "10035": {
         "redirect_url": "https://otieu.com/4/9786651",
         "video_path": "https://osmana.vercel.app/videos/10035.mp4",
-        "title": "Incredible Game-Winning Shot",
-        "description": "Watch the last-second shot that won the championship!",
+        "title": "Backshot 10035",
+        "description": "Get the 10035 backshot.",
     },
-    "sports-highlight": {
-        "redirect_url": "https://example.com/more-sports",
-        "video_path": "https://osmana.vercel.app/videos/sports-highlight.mp4",
-        "title": "Amazing Sports Clip",
-        "description": "A stunning play you have to see!",
-    },
+
 };
 
 export default async function handler(req, res) {
