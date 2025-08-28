@@ -7,14 +7,12 @@ video_data = {
     'sports-highlight': {
         'redirect_url': 'https://otieu.com/4/9786651',
         'video_path': 'https://sportypie.com/static/videos/sports-highlight.mp4',
-        'thumbnail_path': 'https://sportypie.com/static/images/sports-highlight-thumb.jpg',
         'title': 'Incredible Game-Winning Shot',
         'description': 'Watch the last-second shot that won the championship!'
     },
     'funny-cat-video': {
         'redirect_url': 'https://example.com/more-funny-videos',
         'video_path': 'https://sportypie.com/static/videos/funny-cat-video.mp4',
-        'thumbnail_path': 'https://sportypie.com/static/images/funny-cat-video-thumb.jpg',
         'title': 'Hilarious Cat Compilation',
         'description': 'This cat is taking over the internet!'
     }
@@ -32,7 +30,6 @@ def main_page(video_id):
             player_url=player_url,
             title=data['title'],
             description=data['description'],
-            thumbnail_url=data['thumbnail_path'],
             twitter_handle="@SportyPie"
         )
     return "Page not found.", 404
@@ -45,7 +42,6 @@ def video_player(video_id):
         return render_template(
             'video_player.html',
             video_path=data['video_path'],
-            thumbnail_path=data['thumbnail_path'],
             redirect_url=data['redirect_url']
         )
     return "Video not found.", 404
