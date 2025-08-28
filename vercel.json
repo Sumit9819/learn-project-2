@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/10035",
-      "destination": "/api/10035"
+      "source": "/:videoId",
+      "destination": "/api/:videoId"
     }
   ]
 }
