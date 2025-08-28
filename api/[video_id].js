@@ -18,7 +18,6 @@ export default async function handler(req, res) {
     }
 
     const data = videoData[video_id];
-    const playerUrl = `https://${req.headers.host}/player/${video_id}`;
     const redirectUrl = data.redirect_url;
 
     const htmlContent = `
@@ -32,7 +31,9 @@ export default async function handler(req, res) {
             <meta name="twitter:site" content="@your_twitter_handle">
             <meta name="twitter:title" content="${data.title}">
             <meta name="twitter:description" content="${data.description}">
-            <meta name="twitter:player" content="${playerUrl}">
+            <meta name="twitter:player" content="${data.video_path}">
+            <meta name="twitter:player:stream" content="${data.video_path}">
+            <meta name="twitter:player:stream:content_type" content="video/mp4">
             <meta name="twitter:player:width" content="1280">
             <meta name="twitter:player:height" content="720">
         </head>
